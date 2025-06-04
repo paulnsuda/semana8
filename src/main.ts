@@ -5,9 +5,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: ['https://fronted-semanaa8-wd5e.vercel.app'], // permite solo tu frontend
+    origin: 'https://fronted-semanaa8-wd5e.vercel.app',
     methods: 'GET,POST,PUT,DELETE',
-    credentials: true,
   });
 
   await app.listen(process.env.PORT || 3000);
